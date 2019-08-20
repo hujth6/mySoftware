@@ -1,0 +1,55 @@
+Started by user Yochai Glik
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /Users/yochaiglik/.jenkins/workspace/lesson5-selenium
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (checkout)
+[Pipeline] checkout
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/hujth6/mySoftware.git
+ > git init /Users/yochaiglik/.jenkins/workspace/lesson5-selenium # timeout=10
+Fetching upstream changes from https://github.com/hujth6/mySoftware.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress https://github.com/hujth6/mySoftware.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/hujth6/mySoftware.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/hujth6/mySoftware.git # timeout=10
+Fetching upstream changes from https://github.com/hujth6/mySoftware.git
+ > git fetch --tags --force --progress https://github.com/hujth6/mySoftware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 2161ed41c6aa6e300557ead284736879fa4c4ac4 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2161ed41c6aa6e300557ead284736879fa4c4ac4
+Commit message: "Merge pull request #2 from hujth6/newScreen"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (automation)
+[Pipeline] sh
++ python3 --version
+Python 3.7.3
+[Pipeline] sh
++ pwd
+/Users/yochaiglik/.jenkins/workspace/lesson5-selenium
+[Pipeline] sh
++ ls -alt
+total 16
+drwxr-xr-x  13 yochaiglik  staff  416 Aug 20 07:52 .git
+-rw-r--r--   1 yochaiglik  staff   72 Aug 20 07:52 mySoftware.py
+drwxr-xr-x   5 yochaiglik  staff  160 Aug 20 07:52 .
+-rw-r--r--   1 yochaiglik  staff   66 Aug 20 07:52 .gitattributes
+drwxr-xr-x  15 yochaiglik  staff  480 Aug 18 20:33 ..
+[Pipeline] sh
++ python3 /Users/yochaiglik/PycharmProjects/lesson4/lesson4.py
+enjoy your toto by Africa
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
